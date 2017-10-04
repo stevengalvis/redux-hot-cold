@@ -14,5 +14,9 @@ describe('reducer', () => {
     });
   });
 
-  
+  it('Shoud return the current state on an unknown action', () => {
+    let currentState = {};
+    const state = reducer(currentState, {type: '_UNKNOWN'});
+    expect(state).toBe(currentState);
+  });
 });
