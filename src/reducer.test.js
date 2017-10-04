@@ -30,7 +30,17 @@ describe('reducer', () => {
         feedback: 'Make your guess!',
         correctAnswer: state.correctAnswer,
         showInfoModal: false
-      })
-    })
-  })
+      });
+    });
+  });
+
+  describe('makeGuess', () => {
+    it('Should add a new guess', () => {
+      let state;
+      const guess = 25
+      state = reducer(state, makeGuess(guess));
+      expect(state.guesses[0]).toEqual(guess);
+    });
+  });
+
 });
