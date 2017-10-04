@@ -14,5 +14,13 @@ describe('makeGuess', () => {
     const action = makeGuess(guess);
     expect(action.type).toEqual(MAKE_GUESS);
     expect(action.guess).toEqual(guess);
-  })
-})
+  });
+});
+
+describe('toggleInfoModal', () => {
+  it('Should return the action', () => {
+    const action = toggleInfoModal();
+    expect(action.type).toEqual(TOGGLE_INFO_MODAL);
+
+  });
+});
