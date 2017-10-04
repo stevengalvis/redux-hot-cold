@@ -43,4 +43,12 @@ describe('reducer', () => {
     });
   });
 
+  describe('toggleInfoModal', () => {
+    it('Should toggle the Infomodal', () => {
+      let state;
+      state = reducer(state, toggleInfoModal());
+      expect(state.showInfoModal).toEqual(true);
+    });
+  });
+
 });
