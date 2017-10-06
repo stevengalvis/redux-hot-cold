@@ -8,6 +8,11 @@ import './index.css';
 
 import Game from './components/game';
 import store from './store';
+// setup file
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 ReactDOM.render(
     <Provider store={store}>
